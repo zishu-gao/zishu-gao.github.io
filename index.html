@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>千山</title>
+<script type="text/javascript">
+    $(function() {
+        $("#iframe").height(0); //用于每次刷新时控制IFRAME高度初始化 
+        var height = $("#iframe").contents().height() + 20;
+        $("#iframe").height(height < 800 ? 800 : height); //最小的高度700
+    }
+</script>
+</head>
+<body>
+
+<h1>皓月化暮，雪落千山</h1>
+<hr>
+<p><a href="page1-0.html" target="iframe_a">首页</a></p>
+<p><a href="page2-0.html" target="iframe_a">Blog</a></p>
+<hr>
+<iframe id="iframe" iframe src="page1-0.html" name="iframe_a" frameborder="0" style="width: 100%;height: 100vh;"></iframe>
+<hr>
+<p>友情链接:</p>
+<a href="https://www.usc.edu.cn/">南华大学，我的母校</a>
+<br>
+<a href="https://github.com/">Github，为本页面提供了存储服务</a>
+<br>
+<a href="https://www.runoob.com/">菜鸟教程，给对HTML一窍不通的我提供了教程和调试用的在线编辑器</a>
+<br>
+<a href="https://www.dnspod.cn/">DNSPod，为本站提供了免费的域名解析服务</a>
+<hr>
+<p>千山-高子书个人网站
+<sub>beta 0.2.1</sub>
+</p>
+
+</body>
+</html>
