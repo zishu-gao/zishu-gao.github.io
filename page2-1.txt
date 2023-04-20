@@ -1,6 +1,0 @@
-本站是如何构成的？
-
-使用HTML+JS构建，绝大部分代码为自己一边学习HTML语法一边写的，JS代码部分引用自https://developer.aliyun.com/article/857787。
-因为本人暂时还不会JS代码的使用，所以尽量使用纯HTML代码来实现需要的功能，比如“首页”和“Blog”Tap页的切换就是通过iframe实现的，为了能够使iframe自适应大小，引用了互联网上现成的JS代码。
-本站结构很简单，由一个HTML页面，通过iframe嵌套若干个HTML页面实现，具体可参见Github。
-本站的源码在https://github.com/zishu-gao/zishu-gao.github.io可见。
