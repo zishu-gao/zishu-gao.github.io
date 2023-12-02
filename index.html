@@ -1,44 +1,115 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="main.css">
-<meta charset="utf-8">
-<title>千山--高子书个人网站</title>
-<link rel="icon" href="img/ICO.ico" type="image/x-icon">
-<link rel="shortcut icon" href="ICO.ico" type="image/x-icon">
-<script type="text/javascript">
-    $(function() {
-        $("#iframe").height(0); //用于每次刷新时控制IFRAME高度初始化 
-        var height = $("#iframe").contents().height() + 20;
-        $("#iframe").height(height < 800 ? 800 : height); //最小的高度700
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>千山</title>
+    <link rel="icon" href="img/ICO.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="ICO.ico" type="image/x-icon">
+<style>
+body {
+  background-image: url('img/bg1.png'); /* 设置背景图片 */
+  background-size: 10%; /* 背景图片覆盖整个页面 */
+  background-repeat: repeat; 
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+}
+img {
+  vertical-align: middle;
+}
+
+body {
+  font-family: 'lxgw', sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+}
+
+/* 顶栏样式 */
+.topbar {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* 水平居中 */
+  text-align: center; /* 文字居中 */
+  box-sizing: border-box;
+  font-weight: bold; 
+  font-size: 25px; 
+}
+
+/* 侧边栏样式 */
+.sidebar {
+  width: 150px;
+  height: calc(100% - 150px);
+  position: fixed;
+  top: 100px;
+  box-sizing: border-box;
+  font-weight: bold; 
+  font-size: 20px; 
+}
+
+/* 内容区域样式 */
+.content {
+  margin-left: 150px;
+  flex-grow: 1;
+}
+.content iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* 底栏样式 */
+.footer {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* 水平居中 */
+  text-align: center; /* 文字居中 */
+  box-sizing: border-box;
+  font-size: 20px; 
+}
+    #count {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        font-size: 20px; /* 您可以根据需要调整这个值 */
     }
-</script>
+</style>
 </head>
 <body>
 
-<h1 style="display: inline-block;"><img src="img/logo.ico" width="60" height="60" alt="" srcset="" align="middle">皓月化暮，雪落千山</h1>
-<hr>
-<p><a href="page1-0.html" target="iframe_a">首页</a> <a href="page2-0.html" target="iframe_a">Blog</a> <a href="page3-0.html" target="iframe_a">资源下载</a></p>
-<hr>
-<iframe id="iframe" iframe src="page1-0.html" name="iframe_a" frameborder="0" style="width: 100%;height: 100vh;"></iframe>
-<hr>
-<a href="https://space.bilibili.com/84052591">我的Bilibili个人页面</a>
-<br>
-<p>友情链接:</p>
-<a href="https://www.usc.edu.cn/">南华大学，我的母校</a>
-<br>
-<a href="https://github.com/">Github，为本页面提供了服务器</a>
-<br>
-<a href="https://www.runoob.com/">菜鸟教程，给对HTML一窍不通的我提供了教程和调试用的在线编辑器</a>
-<br>
-<a href="https://www.dnspod.cn/">DNSPod，为本站提供了免费的域名解析服务</a>
-<br>
-<a href="https://pics.sunbangyan.cn/">SunPics，为本站提供了免费的图床</a>
-<br>
-<a href="https://github.com/lxgw/LxgwWenKai/">霞鹜文楷，本站使用的开源字体</a>
-<hr>
-<p>千山-高子书个人网站
-<sub>beta 0.5.0</sub>
-</p>
+<div class="topbar">
+    <h1 style="display: inline-block;"><img src="img/logo.ico" width="60" height="60" alt="" srcset="" >皓月化暮，雪落千山</h1>
+</div>
+
+<div class="sidebar">
+    <a href="page0.html" target="contentFrame">首页</a>
+    <br>
+    <a href="page1.html" target="contentFrame">文章</a>
+    <br>
+    <a href="page2.html" target="contentFrame">资源下载</a>
+    <br>
+    <a href="page0-1.html" target="contentFrame">关于</a>
+</div>
+
+<div class="content">
+  <iframe src="page0.html" frameborder="0" name="contentFrame"></iframe>
+</div>
+
+<div class="footer">
+<p>千山
+    <sub>Ver 1.2.1</sub>
+    </p>
+    <div id="count">
+        <span id="busuanzi_container_site_pv">
+            本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        </span>
+    </div>
+</div>
+
 </body>
 </html>
